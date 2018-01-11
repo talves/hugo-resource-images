@@ -1,7 +1,7 @@
 ---
 title: Image by Name (resized)
 getresizeimage: true
-imagename: Fire_Stop
+imagename: normal-fire-stop
 ---
 
-## "Fire_Stop"
+## "normal-fire-stop"
