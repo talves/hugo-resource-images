@@ -1,0 +1,18 @@
+{
+  "name": "hugo-resource-images",
+  "version": "0.1.0",
+  "description": "Example of combining image resources in one directory",
+  "main": "index.js",
+  "scripts": {
+    "test": "None at this time",
+    "build": "hugo",
+    "build:clean": "hugo --gc",
+    "start": "hugo server"
+  },
+  "keywords": [
+    "hugo",
+    "resources"
+  ],
+  "author": "talves",
+  "license": "MIT"
+}

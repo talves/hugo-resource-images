@@ -1,0 +1,16 @@
+[List Template] <a href="/">Home</a>
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+
+{{ if .Params.showimages }}
+  {{ partial "list-images" . }}
+{{ end }}
+{{ if .Params.showresizedimages }}
+  {{ partial "list-resize-images" . }}
+{{ end }}
+{{ if .Params.showimageresources }}
+  {{ partial "list-resource-images" . }}
+{{ end }}
+{{ if .Params.showresizedimageresources }}
+  {{ partial "list-resource-resize-images" . }}
+{{ end }}

@@ -1,0 +1,13 @@
+{{ with .Site.GetPage "section" "media" }}
+  <h2>From {{ .Title }} (media)</h2>
+  {{ $resources := .Resources.ByType "image"}}
+  {{ range $resources }}
+    {{ with . }}
+      {{ $image200x := (.Resize "200x") }}
+      {{ $image400x := (.Resize "400x") }}
+      <img src="{{ $image200x.RelPermalink }}">
+      <img src="{{ $image400x.RelPermalink }}">
+      <br />
+    {{ end }}
+  {{ end }}
+{{ end }}

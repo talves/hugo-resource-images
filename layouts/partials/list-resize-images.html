@@ -1,0 +1,10 @@
+<h2>List of Images on a Page (Resized)</h2>
+{{ with .Page.Resources.ByType "image" }}
+  {{ range . }}
+    {{ $image200x := (.Resize "200x") }}
+    {{ $image400x := (.Resize "400x") }}
+    <img src="{{ $image200x.RelPermalink }}">
+    <img src="{{ $image400x.RelPermalink }}">
+    <br />
+  {{ end }}
+{{ end }}

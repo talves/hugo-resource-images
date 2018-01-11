@@ -1,0 +1,6 @@
+<h2>List of Images on a Page</h2>
+{{ with .Page.Resources.ByType "image" }}
+  {{ range . }}
+  <img style="max-width: 100%;" src="{{ .RelPermalink }}"><br />
+  {{ end }}
+{{ end }}
