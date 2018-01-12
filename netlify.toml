@@ -4,6 +4,10 @@
   publish = "public"
   HUGO_ENV = "preview"
 
+# The default version you use for production if you don't use context below
+[build.environment]
+  HUGO_VERSION = "0.32.3"
+
 # build a preview of the site (Drafts and Future dates also)
 [context.deploy-preview]
   command = "hugo --buildFuture"
