@@ -1,6 +1,6 @@
     {{ $imagename := (.Get 0) }}
     {{ $options := .Get 1 }}
-    {{ with .Site.GetPage "section" "media" }}
+    {{ with .Site.GetPage "page" "media/logos/index.md" }}
       {{ $original := .Resources.GetByPrefix  $imagename }}
       {{ with ($original.Resize $options) }}
       <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">

@@ -1,6 +1,6 @@
 {{ with .Site.GetPage "section" "media" }}
-  <h2>{{ .Title }}</h2>
-  {{ $resources := .Resources.ByType "image"}}
+<h2>From {{ .Title }} (original)</h2>
+{{ $resources := .Resources.ByType "image"}}
   {{ range $resources }}
     {{ with . }}
       <img style="max-width: 100%;" src="{{ .RelPermalink }}">

@@ -1,5 +1,5 @@
 {{ with .Site.GetPage "section" "media" }}
-  <h2>From {{ .Title }} (media)</h2>
+  <h2>From {{ .Title }} (resized)</h2>
   {{ $resources := .Resources.ByType "image"}}
   {{ range $resources }}
     {{ with . }}
