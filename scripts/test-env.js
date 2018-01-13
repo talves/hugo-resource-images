@@ -11,3 +11,8 @@ const child = spawn(command, args);
 child.stdout.on('data', (data) => {
   console.log(`build-command stdout:\n${data}`);
 });
+
+child.on('error', (code, data) => {
+  console.error(`build-command error(${code}):\n${data}`);
+  throw new Error('build-command failed');
+});
