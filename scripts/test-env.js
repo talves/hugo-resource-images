@@ -3,7 +3,7 @@ const { spawn } = require('child_process');
 
 console.log("process.env.context =", process.env.CONTEXT);
 
-const command = `cp -v example/assets/${ process.env.CONTEXT }/* example/`;
+const command = `ls -l`;
 const options = {
   stdio: 'inherit',
   shell: true
@@ -12,7 +12,7 @@ const options = {
 const child = spawn(command, options);
 
 child.on('exit', function (code, signal) {
-  console.log('child process exited with ' +
+  console.log('test-env process exited with ' +
               `code ${code} and signal ${signal}`);
-  if (code !== 0) throw signal;
+  if (code !== 0) throw `error in command`;
 });
