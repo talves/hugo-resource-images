@@ -1,1 +1,2 @@
-console.log("process.env =", process.env.CONTEXT);
+/* Test variable value */
+console.log("process.env.context =", process.env.CONTEXT);
