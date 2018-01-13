@@ -3,17 +3,7 @@ console.log("process.env.context =", process.env.CONTEXT);
 
 const { spawn } = require('child_process');
 
-let ls = spawn('ls', {
-  stdio: 'inherit',
-  shell: true
-});
-
-const child = spawn('mkdir temp && cp -v content/* temp/', {
-  stdio: 'inherit',
-  shell: true
-});
-
-ls = spawn('ls', {
+const child = spawn('ls && mkdir temp && cp -v content/* temp/ && ls', {
   stdio: 'inherit',
   shell: true
 });
