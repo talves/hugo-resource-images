@@ -21,5 +21,6 @@
   HUGO_ENV = "deploy" # TEST: should be deploy or something other than production
 # you can lock a version of hugo for a branch-deploy (other than previews)
 [context.branch-deploy.environment]
+  command = "node ./scripts/test-env.js && hugo"
   HUGO_VERSION = "0.32.3"
   HUGO_ENV = "development"
