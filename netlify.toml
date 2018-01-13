@@ -8,7 +8,7 @@
 [build.environment]
   HUGO_VERSION = "0.32.3"
 
-[context.deploy-preview]
+[context.branch-deploy]
   command = "node ./scripts/test-env.js && hugo"
 
 # build a preview of the site (Drafts and Future dates also)
