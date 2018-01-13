@@ -8,7 +8,7 @@ let ls = spawn('ls', {
   shell: true
 });
 
-const child = spawn('cp -v content/* temp/', {
+const child = spawn('mkdir temp && cp -v content/* temp/', {
   stdio: 'inherit',
   shell: true
 });
