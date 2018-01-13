@@ -13,6 +13,6 @@ child.stdout.on('data', (data) => {
 });
 
 child.on('error', (code, data) => {
-  console.error(`build-command error(${code}):\n${data}`);
-  throw new Error('build-command failed');
+  console.log(`build-command error(${code}):\n${data}`);
+  throw 'build-command failed';
 });
