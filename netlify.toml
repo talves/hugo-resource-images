@@ -8,6 +8,9 @@
 [build.environment]
   HUGO_VERSION = "0.32.3"
 
+[context.deploy-preview]
+  command = "node ./scripts/test-env.js && hugo"
+
 # build a preview of the site (Drafts and Future dates also)
 [context.deploy-preview]
   command = "hugo --buildFuture"
@@ -21,6 +24,5 @@
   HUGO_ENV = "deploy" # TEST: should be deploy or something other than production
 # you can lock a version of hugo for a branch-deploy (other than previews)
 [context.branch-deploy.environment]
-  command = "node ./scripts/test-env.js && hugo"
   HUGO_VERSION = "0.32.3"
   HUGO_ENV = "development"
