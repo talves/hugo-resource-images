@@ -1,14 +1,15 @@
 /* Test variable value */
 console.log("process.env.context =", process.env.CONTEXT);
 
-const { spawn } = require('child_process');
+const command = 'cp';
+const args = ['-v', `example/assets/${ process.env.CONTEXT }/*`, 'example/'];
 
-const child = spawn('console.log', ['-v', 'content/*', `${ process.env.CONTEXT }/`]);
+const child = spawn(command, args);
 
 child.stdout.on('data', (data) => {
-  console.log(`test-env stdout:\n${data}`);
+  console.log(`build-command stdout:\n${data}`);
 });
 
 child.stderr.on('data', (data) => {
-  console.error(`test-env stderr:\n${data}`);
+  console.error(`build-command stderr:\n${data}`);
 });
