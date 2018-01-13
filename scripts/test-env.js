@@ -10,3 +10,9 @@ const options = {
 };
 
 const child = spawn(command, options);
+
+child.on('exit', function (code, signal) {
+  console.log('child process exited with ' +
+              `code ${code} and signal ${signal}`);
+  if (code !== 0) throw signal;
+});
