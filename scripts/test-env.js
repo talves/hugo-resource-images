@@ -1,4 +1,6 @@
 /* Test variable value */
+const { spawn } = require('child_process');
+
 console.log("process.env.context =", process.env.CONTEXT);
 
 const command = 'cp';
