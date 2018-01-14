@@ -1,0 +1,5 @@
+{{ $data := index $.Site.Data.youtube .data }}
+{{ range $data }}
+<h2>Video is {{ .id }}</h2>
+{{ partial "component/youtube" . }}
+{{ end }}

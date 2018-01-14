@@ -1,0 +1,7 @@
+{{ if .IsNamedParams }}
+  {{ $data := index $.Site.Data.youtube $.Params.data }}
+  {{ range $data }}
+    <h2>Video is {{ .id }}</h2>
+    {{ partial "component/youtube" . }}
+  {{ end }}
+{{- end -}}
