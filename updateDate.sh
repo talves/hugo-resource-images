@@ -16,11 +16,11 @@
 ####
 
 # Make sure we are not running this on a bare Repository
-REPO_TYPE=`git config --list|egrep ^core.bare | awk -F '=' '{ print $2 }'`
-if [ "$REPO_TYPE" == "true" ]
-then
-	echo "Cannot run this script on a bare Repository" && exit 1
-fi
+# REPO_TYPE=`git config --list|egrep ^core.bare | awk -F '=' '{ print $2 }'`
+# if [ "$REPO_TYPE" == "true" ]
+# then
+# 	echo "Cannot run this script on a bare Repository" && exit 1
+# fi
 
 echo "Updating Git Repository Last Modified Time-stamp"
 
