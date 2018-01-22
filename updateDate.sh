@@ -26,7 +26,7 @@
 
 	# Obtain the Operating System
 	OS=${OS:-`uname`}
-	echo OS
+	echo ${OS:-`uname`}
 
 	# Get the last revision hash of a particular file in the git repository
 	getFileLastRevision() 
