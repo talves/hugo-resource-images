@@ -8,7 +8,7 @@ const writefile = `API_KEY = ${process.env.API_KEY}\n`
 console.log(`${writepath} of ${writefile}`)
 fs.writeFileSync(
   writepath,
-  writefile
+  './.env'
 )
 
 console.log("process.env.context =", process.env.CONTEXT);
