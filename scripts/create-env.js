@@ -6,10 +6,7 @@ const { spawn } = require('child_process');
 const writepath = path.join(__dirname, '.' + 'env')
 const writefile = `API_KEY = ${process.env.API_KEY}\n`
 console.log(`${writepath} of ${writefile}`)
-fs.writeFileSync(
-  './.env',
-  writefile,
-)
+fs.writeFileSync('./.env', writefile)
 
 console.log("process.env.context =", process.env.CONTEXT);
 
