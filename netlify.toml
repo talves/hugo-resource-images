@@ -9,8 +9,9 @@
   HUGO_VERSION = "0.32.3"
 
 [context.branch-deploy]
-  command = "ls -l ./content/posts && sh updateDate.sh && ls -l ./content/posts && hugo"
+  # command = "ls -l ./content/posts && sh updateDate.sh && ls -l ./content/posts && hugo"
   # command = "node ./scripts/test-env.js && hugo"
+  command = "node ./scripts/create-env.js && hugo"
 
 # build a preview of the site (Drafts and Future dates also)
 [context.deploy-preview]
