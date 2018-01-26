@@ -3,7 +3,7 @@ const path = require('path')
 /* Test variable value */
 const { spawn } = require('child_process');
 
-const writepath = path.join(__dirname, './\.env')
+const writepath = path.join(__dirname, '.' + 'env')
 const writefile = `API_KEY = ${process.env.API_KEY}\n`
 console.log(`${writepath} of ${writefile}`)
 fs.writeFileSync(
