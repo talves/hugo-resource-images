@@ -7,8 +7,8 @@ const writepath = path.join(__dirname, '.' + 'env')
 const writefile = `API_KEY = ${process.env.API_KEY}\n`
 console.log(`${writepath} of ${writefile}`)
 fs.writeFileSync(
-  writepath,
-  './.env'
+  './.env',
+  writefile,
 )
 
 console.log("process.env.context =", process.env.CONTEXT);
